@@ -4,6 +4,49 @@ A vendor-neutral control plane for heterogeneous, cross-vendor autonomous agent 
 
 ---
 
+## Vision
+
+We are moving toward a world where agents mediate most of our routine interactions — not just with companies and services, but with each other. Your agents talk to your colleagues' agents. They negotiate with your suppliers' agents. They track your purchases, manage your schedule, find the best deal, and handle the back-and-forth that currently requires your attention and often requires another person's attention on the other side.
+
+This isn't far off. The question isn't whether it will happen — it's whether the infrastructure beneath it gets built thoughtfully.
+
+**The future state this project is working toward:**
+
+You have a set of agents. They handle your Amazon purchases — finding the right product, comparing prices, tracking shipping. They coordinate with your work colleagues' agents to schedule meetings, share context, and move projects forward. They communicate with your friends' agents to make plans, share recommendations, surface things you'd each care about. You don't manage each of these interactions. Instead, you have a single layer that shows you what your agents are doing, ensures they're using the right data, flags decisions that need your judgment, and tells you when outcomes aren't tracking right.
+
+Your friends and colleagues use different AI vendors — Anthropic, OpenAI, Google, others. That shouldn't matter. Their agents and yours interoperate, and the quality of the interaction doesn't depend on which platform anyone chose.
+
+This is what agent-fabric is for.
+
+---
+
+## The Risk Worth Taking Seriously
+
+This future has a real shadow. COVID gave us a preview.
+
+During lockdowns, human-to-human interaction dropped sharply — and the effects were not uniform. Productivity adapted faster than wellbeing. Adults with established social networks found workarounds. But younger people, whose social and developmental needs depend on unmediated physical interaction, faced measurable harm: elevated anxiety and depression, disrupted identity formation, weakened peer relationships, a collapse of the casual spontaneous contact that doesn't survive being scheduled on a calendar.
+
+The risk with a heavily agent-mediated world isn't that people stop interacting — it's that the texture of interaction changes in ways we don't fully account for. If agents handle the friction and coordination of social life, do people lose the practice of navigating that friction themselves? If your agent can always find you a better deal faster, do you lose the serendipity of browsing — the unplanned discovery, the conversation it starts? If coordination becomes frictionless, does it also become shallow?
+
+These aren't arguments against building this. They're arguments for building it with intention.
+
+**Agent-fabric's design commitment:** the control plane layer should make human contact easier to choose, not harder to maintain. Agents should handle the transactional so that human attention can concentrate on what is actually relational. The goal is not to replace human interaction — it is to reduce the overhead that competes with it.
+
+**Concrete design implications:**
+- Agents should surface "a human may want to handle this" as a first-class outcome, not a failure mode
+- The control plane should make it easy to see which interactions have been delegated and easy to step back in
+- Agents communicating with other humans' agents should not obscure the human behind the agent — identity and representation matter
+- The system should be auditable enough that you can always understand what was done on your behalf and why
+
+**Open questions to investigate:**
+- What interaction types should agents never fully own? (Emotional conversations, conflict resolution, relationship-defining decisions?)
+- How do we design agent behavior that preserves the social byproducts of "friction" — the serendipity, the unplanned contact, the developmental value of working something out yourself?
+- What do we know from COVID research about which populations are most at risk from reduced direct human contact, and how does that inform design constraints?
+- How does IRL interaction change when routine coordination is handled by agents? Does it concentrate or diminish?
+- What signals would tell us the system is working well for human flourishing, not just task throughput?
+
+---
+
 ## What This Is
 
 Agent-fabric is an infrastructure layer that sits *above* individual agent runtimes and *below* business applications. It does not replace orchestration frameworks (LangGraph, CrewAI, OpenAI Agents SDK) — it makes a fleet of agents built on those frameworks **governable, observable, interoperable, and auditable** across vendor boundaries.

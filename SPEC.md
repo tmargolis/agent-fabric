@@ -11,6 +11,67 @@ This spec defines the intended architecture of agent-fabric, the open questions 
 
 ---
 
+## Vision and Intended Impact
+
+### The world this is building toward
+
+Agents will mediate most routine interactions — between people, between people and organizations, and increasingly between people via their agents. Your agents handle the logistics: finding products, comparing prices, tracking shipments, scheduling with colleagues, coordinating with friends, managing the back-and-forth that currently consumes time and attention.
+
+This creates a new problem: you have a fleet of agents operating on your behalf, using agents from different vendors on the other side of every interaction, with no unified layer to see what they're doing, verify their decisions, or ensure their outcomes are actually good.
+
+Agent-fabric is that layer. Not the agents themselves — the control plane that makes a fleet of heterogeneous, cross-vendor agents governable, observable, and trustworthy.
+
+**The specific scenario this is designed for:**
+- A person has multiple agents handling different domains: purchases, work coordination, social scheduling, financial monitoring
+- Those agents interact with agents belonging to colleagues, friends, vendors, and institutions — each potentially running on different LLM providers (Anthropic, OpenAI, Google, others)
+- The person does not manage each interaction — but they retain the ability to see what's happening, intervene when it matters, and trust that outcomes are being tracked
+- The control plane makes this possible without requiring technical expertise to operate
+
+### Why this matters beyond productivity
+
+The efficiency case is obvious. The human case is harder and more important.
+
+**COVID as a reference point:**
+
+The COVID lockdowns were an uncontrolled experiment in what happens when human-to-human interaction drops sharply and suddenly. The results were instructive:
+
+- Productivity, for many knowledge workers, adapted. Remote tools filled the coordination gap.
+- Wellbeing did not adapt equally. Adults with established social networks found workarounds; children and adolescents did not have that buffer.
+- Younger people faced disproportionate harm: elevated anxiety and depression, disrupted identity formation, a collapse of the incidental and spontaneous social contact that does not survive being scheduled.
+- The loss of "friction" turned out to matter. The casual hallway conversation, the unplanned lunch, the serendipitous encounter — these are not inefficiencies to be optimized away. They are load-bearing parts of how humans develop, connect, and maintain wellbeing.
+
+The agent-mediated world risks repeating this pattern at larger scale and longer duration — not through a crisis, but through gradual design choices that accumulate into a changed social environment.
+
+**The specific risks to investigate:**
+
+1. **Social atrophy** — If agents handle the coordination overhead of social life, do people lose the practice and motivation for direct contact? Does frictionless coordination become shallow coordination?
+2. **Serendipity loss** — Unmediated browsing, conversations, and encounters produce unexpected value that targeted agent action cannot replicate. How much of this gets lost when agents optimize for stated goals?
+3. **Youth development** — Adolescents need unmediated peer interaction for identity formation and social development. What design constraints follow from protecting this?
+4. **Representation and authenticity** — When your agent talks to my agent, are we still in relationship, or have we outsourced the relationship? How does identity and human presence get preserved across agent boundaries?
+5. **Inequality of access** — Not everyone will have equally capable agents. If agents mediate access to opportunities, goods, and services, do better agents produce better life outcomes? Does this compound existing inequality?
+
+### Design commitments
+
+These risks are not arguments against building — they are inputs to how it gets built. Agent-fabric's design should reflect the following commitments:
+
+- **Agents serve the human relationship, not replace it.** The control plane should make it easy to see what has been delegated and easy to reclaim. Delegation is a choice, not a default slide.
+- **"A human should handle this" is a valid outcome.** The system should surface this recommendation, not suppress it. Some interactions should be flagged as relational, emotional, or consequential enough that agent handling is inappropriate.
+- **Transparency across agent boundaries.** When your agent is talking to another person's agent, both principals should know this is happening. Obscuring the human behind the agent is a design failure.
+- **Auditability over automation.** Every action taken on your behalf should be reviewable in plain language. The control plane exists to make this possible at scale.
+
+### Open questions for investigation
+
+- [ ] What categories of interaction should agents never fully own? (Conflict resolution, emotional support, relationship-defining decisions — what's the list, and how is it enforced?)
+- [ ] What does COVID-era research tell us about which populations are most vulnerable to reduced direct contact, and what design constraints follow?
+- [ ] How do IRL interaction patterns change when routine coordination is offloaded to agents? Does human attention concentrate on higher-quality interactions, or does it atrophy from disuse?
+- [ ] What signals distinguish "agents are freeing humans for more meaningful contact" from "agents are substituting for human contact"? What would we measure?
+- [ ] How should agents handle emotionally charged interactions that begin as transactional? (A shipping dispute that becomes a customer service breakdown; a scheduling request that surfaces a personal conflict)
+- [ ] How do we design for serendipity — preserving the unexpected encounter, the unoptimized browse, the accidental discovery — in a world where agents are optimizing for declared goals?
+- [ ] What does the representation and identity layer need to do so that cross-agent communication doesn't erase the human behind the agent?
+- [ ] How do differences in agent capability translate to differences in access and outcome — and what mitigations belong at the control plane layer versus the policy layer?
+
+---
+
 ## Background and Positioning
 
 ### What Agent-Fabric Is Not

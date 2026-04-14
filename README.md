@@ -82,32 +82,32 @@ Three converging signals make this the right time to build:
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                   Applications & Consumers                   │
+│                   Applications & Consumers                  │
 └──────────────────────────┬──────────────────────────────────┘
                            │
 ┌──────────────────────────▼──────────────────────────────────┐
-│                     agent-fabric                             │
-│                                                              │
+│                     agent-fabric                            │
+│                                                             │
 │  ┌─────────────┐  ┌─────────────┐  ┌─────────────────────┐  │
 │  │  Inventory  │  │  Identity   │  │   Policy / Authz    │  │
 │  │  & Registry │  │  & Trust    │  │   Engine            │  │
 │  └─────────────┘  └─────────────┘  └─────────────────────┘  │
-│                                                              │
+│                                                             │
 │  ┌─────────────────────────────────────────────────────┐    │
-│  │           Orchestration & Execution Layer            │    │
-│  │   Workflow Runtime │ Durable Execution │ Harness     │    │
+│  │           Orchestration & Execution Layer           │    │
+│  │   Workflow Runtime │ Durable Execution │ Harness    │    │
 │  └─────────────────────────────────────────────────────┘    │
-│                                                              │
+│                                                             │
 │  ┌──────────────────┐  ┌──────────────────────────────┐     │
-│  │  Tool / Data Bus  │  │  Observability & Evaluation  │     │
-│  │  (MCP)            │  │  (OTel + Evaluators)         │     │
+│  │  Tool / Data Bus │  │  Observability & Evaluation  │     │
+│  │  (MCP)           │  │  (OTel + Evaluators)         │     │
 │  └──────────────────┘  └──────────────────────────────┘     │
 └──────────────────────────┬──────────────────────────────────┘
                            │
 ┌──────────────────────────▼──────────────────────────────────┐
-│          Agent Runtimes (LangGraph, CrewAI, Agents SDK…)     │
-│          MCP Servers (tools, data sources)                   │
-│          External / Third-party Agents (via A2A)             │
+│          Agent Runtimes (LangGraph, CrewAI, Agents SDK…)    │
+│          MCP Servers (tools, data sources)                  │
+│          External / Third-party Agents (via A2A)            │
 └─────────────────────────────────────────────────────────────┘
 ```
 
@@ -139,7 +139,7 @@ The following areas have no settled answer and are the core research targets for
 4. **Personal vs. enterprise control plane unification** — Consumer identity (OAuth, retail, scheduling) and enterprise identity (SAML, SCIM, RBAC) are separate worlds. Can one control plane span both?
 5. **Policy-as-code for agent actions** — What does a portable, enforceable policy language for agent tool calls and task transitions look like?
 
-These are expanded into investigation sections in `SPEC.md`.
+These are expanded into investigation sections in [SPEC.md](SPEC.md).
 
 ---
 
@@ -161,4 +161,4 @@ These are expanded into investigation sections in `SPEC.md`.
 
 ## Status
 
-Early-stage. Spec and investigation in progress. See `SPEC.md` for open questions and design decisions.
+Early-stage. Spec and investigation in progress. See [SPEC.md](SPEC.md) for open questions and design decisions.

@@ -438,4 +438,4 @@ None span consumer identity, are vendor-neutral end-to-end, and expose governanc
 
 ## License
 
-This specification document is covered by the [CC BY-ND 4.0](https://creativecommons.org/licenses/by-nd/4.0/) license. For the full text of the license, please refer to the [LICENSE](LICENSE) file.
+This specification document is covered by the [CC BY-ND 4.0](https://creativecommons.org/licenses/by-nd/4.0/) license. For the full text of the license, please refer to the [LICENSE](LICENSE.md) file.

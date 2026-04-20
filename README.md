@@ -162,3 +162,25 @@ These are expanded into investigation sections in [SPEC.md](SPEC.md).
 ## Status
 
 Early-stage. Spec and investigation in progress. See [SPEC.md](SPEC.md) for open questions and design decisions.
+
+---
+
+## License
+
+### Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-ND 4.0)
+
+#### What is Permitted:
+- Viewing the work
+- Forking the work for discussion
+- Commenting on the work
+
+#### What is Prohibited:
+- Modifications of the work
+- Commercial use without permission
+
+#### Attribution Requirements:
+- You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
+
+#### Contact Information for Licensing Inquiries:
+- For questions regarding licensing, please contact [info@toddmargolis.net].
+

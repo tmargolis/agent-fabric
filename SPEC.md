@@ -433,3 +433,9 @@ Ordered by which unknowns will block architecture decisions most immediately:
 | LangSmith | Observability | Deep LangChain integration, traces, eval loops | LangChain ecosystem dependency |
 
 None span consumer identity, are vendor-neutral end-to-end, and expose governance as a portable, policy-as-code layer.
+
+---
+
+## License
+
+This specification document is covered by the [CC BY-ND 4.0](https://creativecommons.org/licenses/by-nd/4.0/) license. For the full text of the license, please refer to the [LICENSE](LICENSE) file.
